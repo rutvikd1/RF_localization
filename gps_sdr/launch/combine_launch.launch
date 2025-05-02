@@ -1,0 +1,24 @@
+<launch>
+    
+    <node pkg="gps_sdr" 
+          type="sdr_logger.py" 
+          name="sdr_node" 
+          output="screen"
+          />
+    <node pkg="gps_sdr" 
+          type="rtk_rel.py" 
+          name="relative_pos" 
+          output="screen"
+          />
+    <node pkg="gps_sdr"
+          type="receiving_node.py" 
+          name="sync_data" 
+          output="screen"
+          />
+    <node pkg="gps_sdr" 
+          type="plottin.py" 
+          name="plotting_node" 
+          output="screen"
+          />
+          
+</launch>
